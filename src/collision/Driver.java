@@ -11,6 +11,7 @@ public class Driver {
 		
 		Vector2D add = VectorMath.Add(a, b);
 		Vector2D subtract = VectorMath.Subtract(a, b);
+		Vector2D negate = VectorMath.Negate(a);
 		
 		System.out.println("Vector A");
 		System.out.println("X: " +a.x + " Y: " + a.y);
@@ -23,6 +24,12 @@ public class Driver {
 		
 		System.out.println("Subtract a + b");
 		System.out.println("X: " +subtract.x + " Y: " + subtract.y);
+		
+		System.out.println("Negate A");
+		System.out.println("X: " +negate.x + " Y: " + negate.y);
+		
+		System.out.println("Assert Vector");
+		VectorMath.AssertEqualVectors(a,b);
 		
 	}
 

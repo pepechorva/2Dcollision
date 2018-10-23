@@ -50,5 +50,21 @@ public class Vector2D {
 			assert(EqualFloats(a.y,b.y));
 			
 		}
+		
+		public static Vector2D Multiply(Vector2D v, float scalar)
+		{
+			Vector2D r = new Vector2D();
+			r.x = v.x * scalar;
+			r.y = v.y * scalar;
+			return r;
+		}
+		
+		public static Vector2D Divide(Vector2D v, float divisor)
+		{
+			Vector2D r = new Vector2D();
+			r.x = v.x/divisor;
+			r.y = v.y/divisor;
+			return r;
+		}
 	}
 }

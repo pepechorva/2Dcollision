@@ -14,6 +14,7 @@ public class Driver {
 		Vector2D negate = VectorMath.Negate(a);
 		Vector2D multiply = VectorMath.Multiply(a, 10f);
 		Vector2D divide = VectorMath.Divide(b, 2f);
+		 
 		
 		System.out.println("Vector A");
 		System.out.println("X: " +a.x + " Y: " + a.y);
@@ -38,6 +39,9 @@ public class Driver {
 		
 		System.out.println("Divide Vector B by scalar 2");
 		System.out.println("X: " + divide.x + " Y: " + divide.y );
+		
+		System.out.println("Length of Vector B");
+		System.out.println(VectorMath.Length(b));
 		
 	}
 

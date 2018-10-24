@@ -66,5 +66,10 @@ public class Vector2D {
 			r.y = v.y/divisor;
 			return r;
 		}
+		
+		public static float Length(Vector2D v)
+		{
+			return (float)Math.sqrt(v.x*v.x + v.y*v.y);
+		}
 	}
 }

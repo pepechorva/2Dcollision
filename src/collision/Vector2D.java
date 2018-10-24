@@ -71,5 +71,15 @@ public class Vector2D {
 		{
 			return (float)Math.sqrt(v.x*v.x + v.y*v.y);
 		}
+		
+		public static Vector2D UnitVector(Vector2D v) 
+		{
+			float length = Length(v);
+			if(0<length)
+			{
+				return Divide(v,length);
+			}
+			return v;
+		}
 	}
 }

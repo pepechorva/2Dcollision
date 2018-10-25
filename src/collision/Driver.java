@@ -14,6 +14,9 @@ public class Driver {
 		Vector2D negate = VectorMath.Negate(a);
 		Vector2D multiply = VectorMath.Multiply(a, 10f);
 		Vector2D divide = VectorMath.Divide(b, 2f);
+		Vector2D rotate = VectorMath.Rotate(a, 90);
+		float dot = VectorMath.DotProduct(a, b);
+		
 		 
 		
 		System.out.println("Vector A");
@@ -42,6 +45,12 @@ public class Driver {
 		
 		System.out.println("Length of Vector B");
 		System.out.println(VectorMath.Length(b));
+		
+		System.out.println("Rotate Vector");
+		System.out.println("X: " + rotate.x + "Y: " + rotate.y);
+		
+		System.out.println("Dot Product of Vector a and b");
+		System.out.println(VectorMath.DotProduct(a, b));
 		
 	}
 

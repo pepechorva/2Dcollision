@@ -101,5 +101,26 @@ public class Vector2D {
 			r.y = v.x * sine + v.y * cosine;
 			return r;
 		}
+		
+		private static float RadianToDegrees(float radian) 
+		{
+			return (float) Math.toDegrees(radian);
+		}
+		
+		public static float DotProduct(Vector2D a, Vector2D b)
+		{
+			return a.x * b.x + a.y * b.y;
+		}
+		
+		public static float EnclosedAngle(Vector2D a, Vector2D b)
+		{
+			Vector2D ua = UnitVector(a);
+			Vector2D ub = UnitVector(b);
+			float dp = DotProduct(ua, ub);
+			return RadianToDegrees((float) Math.acos(dp));
+		}
+
+		
+		
 	}
 }

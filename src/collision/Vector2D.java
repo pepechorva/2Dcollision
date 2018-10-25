@@ -14,6 +14,11 @@ public class Vector2D {
 		this.y = y;
 	}
 	
+	public String toString()
+	{
+		return "Creating vectors is fun!";
+	}
+	
 	public static class VectorMath
 	{
 		public static Vector2D Add(Vector2D a, Vector2D b)

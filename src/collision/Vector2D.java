@@ -1,5 +1,7 @@
 package collision;
 
+import java.text.DecimalFormat;
+
 public class Vector2D {
 	public float x;
 	public float y;
@@ -80,6 +82,24 @@ public class Vector2D {
 				return Divide(v,length);
 			}
 			return v;
+		}
+		
+		public static float DegreesToRadians(float degrees)
+		{
+			return (float) Math.toRadians(degrees);
+		}
+		
+		public static Vector2D Rotate(Vector2D v, float degrees)
+		{
+			float radian = DegreesToRadians(degrees);
+			float sine = (float) Math.sin(radian);
+			float cosine = (float)Math.cos(radian);
+			
+			Vector2D r = new Vector2D();
+			
+			r.x = v.x * cosine - v.y * sine;
+			r.y = v.x * sine + v.y * cosine;
+			return r;
 		}
 	}
 }

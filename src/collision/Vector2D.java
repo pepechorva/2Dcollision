@@ -120,6 +120,16 @@ public class Vector2D {
 			return RadianToDegrees((float) Math.acos(dp));
 		}
 
+		public static Vector2D ProjectVector(Vector2D project, Vector2D onto)
+		{
+			float d = DotProduct(onto, onto);
+			if(0 < d)
+			{
+				float dp = DotProduct(project, onto);
+				return Multiply(onto, dp/d);
+			}
+			return onto;
+		}
 		
 		
 	}

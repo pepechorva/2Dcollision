@@ -16,6 +16,7 @@ public class Driver {
 		Vector2D divide = VectorMath.Divide(b, 2f);
 		Vector2D rotate = VectorMath.Rotate(a, 90);
 		float dot = VectorMath.DotProduct(a, b);
+		Line l1 = new Line(a,b);
 		
 		 
 		
@@ -50,7 +51,8 @@ public class Driver {
 		System.out.println("X: " + rotate.x + "Y: " + rotate.y);
 		
 		System.out.println("Dot Product of Vector a and b");
-		System.out.println(VectorMath.DotProduct(a, b));
+		System.out.println(dot);
+		
 		
 	}
 

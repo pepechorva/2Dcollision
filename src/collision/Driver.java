@@ -9,13 +9,13 @@ public class Driver {
 		Vector2D a = new Vector2D(1,1);
 		Vector2D b = new Vector2D(2,2);
 		
-		Vector2D add = VectorMath.Add(a, b);
-		Vector2D subtract = VectorMath.Subtract(a, b);
-		Vector2D negate = VectorMath.Negate(a);
-		Vector2D multiply = VectorMath.Multiply(a, 10f);
-		Vector2D divide = VectorMath.Divide(b, 2f);
-		Vector2D rotate = VectorMath.Rotate(a, 90);
-		float dot = VectorMath.DotProduct(a, b);
+		Vector2D add = VectorMath.add(a, b);
+		Vector2D subtract = VectorMath.subtract(a, b);
+		Vector2D negate = VectorMath.negate(a);
+		Vector2D multiply = VectorMath.multiply(a, 10f);
+		Vector2D divide = VectorMath.divide(b, 2f);
+		Vector2D rotate = VectorMath.rotate(a, 90);
+		float dot = VectorMath.dotProduct(a, b);
 		
 		 
 		
@@ -35,7 +35,7 @@ public class Driver {
 		System.out.println("X: " +negate.x + " Y: " + negate.y);
 		
 		System.out.println("Assert Vector");
-		VectorMath.AssertEqualVectors(a,b);
+		VectorMath.assertEqualVectors(a,b);
 		
 		System.out.println("Multiply Vector A by scalar 10");
 		System.out.println("X: " + multiply.x + " Y: " + multiply.y );
@@ -44,13 +44,13 @@ public class Driver {
 		System.out.println("X: " + divide.x + " Y: " + divide.y );
 		
 		System.out.println("Length of Vector B");
-		System.out.println(VectorMath.Length(b));
+		System.out.println(VectorMath.length(b));
 		
 		System.out.println("Rotate Vector");
 		System.out.println("X: " + rotate.x + "Y: " + rotate.y);
 		
 		System.out.println("Dot Product of Vector a and b");
-		System.out.println(VectorMath.DotProduct(a, b));
+		System.out.println(dot);
 		
 	}
 

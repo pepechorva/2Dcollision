@@ -50,6 +50,18 @@ public class Driver {
 		System.out.println("Dot Product of Vector a and b");
 		System.out.println(dot);
 
+		Rectangle rectA = new Rectangle(new Vector2D(1, 1), new Vector2D(4, 4));
+		Rectangle rectB = new Rectangle(new Vector2D(2, 2), new Vector2D(5, 5));
+		Rectangle rectC = new Rectangle(new Vector2D(6, 4), new Vector2D(4, 2));
+
+		System.out.println("Rectangle collision: ");
+		System.out.println(
+				"Rectangle A collides with B: " + String.valueOf(true == Rectangle.rectanglesCollide(rectA, rectB)));
+		System.out.println(
+				"Rectangle B collides with C: " + String.valueOf(true == Rectangle.rectanglesCollide(rectB, rectC)));
+		System.out.println(
+				"Rectangle A collides with C: " + String.valueOf(true == Rectangle.rectanglesCollide(rectA, rectC)));
+
 	}
 
 }

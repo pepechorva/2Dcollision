@@ -56,12 +56,20 @@ public class Driver {
 
 		System.out.println("Rectangle collision: ");
 		System.out.println(
-				"Rectangle A collides with B: " + String.valueOf(true == Rectangle.rectanglesCollide(rectA, rectB)));
+				"Rectangle A collides with Rectangle B: " + String.valueOf(true == Rectangle.rectanglesCollide(rectA, rectB)));
 		System.out.println(
-				"Rectangle B collides with C: " + String.valueOf(true == Rectangle.rectanglesCollide(rectB, rectC)));
+				"Rectangle B collides with Rectangle C: " + String.valueOf(true == Rectangle.rectanglesCollide(rectB, rectC)));
 		System.out.println(
-				"Rectangle A collides with C: " + String.valueOf(true == Rectangle.rectanglesCollide(rectA, rectC)));
-
+				"Rectangle A collides with Rectangle C: " + String.valueOf(true == Rectangle.rectanglesCollide(rectA, rectC)));
+		
+		Circle ca = new Circle(new Vector2D(4, 4),2);
+		Circle cb = new Circle(new Vector2D(7, 4),2);
+		Circle cc = new Circle(new Vector2D(10,4),2);
+		
+		System.out.println("Circle collision: ");
+		System.out.println("Circle A collides with circle B:" + String.valueOf(true == Circle.circlesCollide(ca, cb)));
+		System.out.println("Circle B collides with circle C:" + String.valueOf(true == Circle.circlesCollide(cb, cc)));
+		System.out.println("Circle A collides with circle C:" + String.valueOf(true == Circle.circlesCollide(ca, cc)));
 	}
 
 }
